@@ -1,11 +1,18 @@
 import "./App.css";
-import Navbar from "./components/Layout/Navbar";
-import Portfolio from "./components/pages/Portfolio";
+import Banner from "./components/pages/home/Banner";
+import PortfolioIntro from "./components/pages/home/PortfolioIntro";
+import ServiceItem from "./components/pages/home/ServiceItem";
+import Article from "./components/pages/home/Article";
+// import Portfolio from "./components/pages/Portfolio";
 function App() {
   return (
     <div className=" container ">
-      <Navbar />
-      <Portfolio />
+      {/* <Portfolio /> */}
+
+      <Banner />
+      <PortfolioIntro />
+      <ServiceItem />
+      <Article />
     </div>
   );
 }

@@ -1,35 +1,77 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
 
+interface CardProps {
+  imagSrc: string;
+  title: string;
+  description: string;
+  hashTags: string[];
+}
 function App() {
-  const [count, setCount] = useState(0)
-
+  const data: Array<CardProps> = [
+    {
+      imagSrc: "story1.png",
+      title: "星際旅行訂票平台",
+      description: "悠遊宇宙的夢想，從這裡開始實現",
+      hashTags: ["網頁設計", "響應式設計", "Bootstrap"],
+    },
+    {
+      imagSrc: "story2.png",
+      title: "理財App",
+      description: "連動帳戶與行動支付，讓 AI 提供您最好的理財建議",
+      hashTags: ["APP設計", "iOS", "React"],
+    },
+    {
+      imagSrc: "story3.png",
+      title: "醫美診所官網",
+      description: "永保青春的秘密，從粹究開始",
+      hashTags: ["網頁設計", "響應式設計", "ＷordPress"],
+    },
+    {
+      imagSrc: "story4.png",
+      title: "美美美早餐店 POS 機 UI Design",
+      description: "訂單送單一目瞭然，自動報表分析好輕鬆",
+      hashTags: ["UI 設計", "前端開發", "Wix"],
+    },
+    {
+      imagSrc: "story5.png",
+      title: "電影院訂票系統",
+      description: "三步驟完成訂票，電腦手機都支援",
+      hashTags: ["前端開發", "後端支援", "Vue"],
+    },
+    {
+      imagSrc: "story6.png",
+      title: "巧克巧克形象官網設計",
+      description: "三步驟完成訂票，電腦手機都支援",
+      hashTags: ["UI設計", "設計系統", "網路電商"],
+    },
+  ];
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="grid grid-cols-1 md:grid-cols-2">
+      {data.map((item, idx) => (
+        <div key={`cardItem-${idx}`} className="card ml-6 mb-20">
+          <figure>
+            <img src={item.imagSrc} alt="" />
+          </figure>
+          <div className=" text-left">
+            <h2 className=" text-black font-bold mt-4 mb-2 text-[28px]">
+              {item.title}
+            </h2>
+            <p className="text-[#919191] mb-6">{item.description}</p>
+            <div className="card-actions  ">
+              {item.hashTags.map((item, idx) => (
+                <button
+                  key={idx}
+                  className="btn  bg-[#F1F1F1] rounded-full mr-4"
+                >
+                  {item}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
 }
 
-export default App
+export default App;

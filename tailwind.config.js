@@ -8,5 +8,9 @@ export default {
     },
     extend: {},
   },
+  darkMode: false,
   plugins: [daisyui],
+  daisyui: {
+    theme: ["light"],
+  },
 };

@@ -5,6 +5,7 @@ import App from "./App.tsx";
 import "./index.css";
 import BasicLayout from "./components/Layout/index.tsx";
 import Portfolio from "./components/pages/Portfolio.tsx";
+import ServicePage from "./components/pages/ServicePage.tsx";
 
 const router = createBrowserRouter(
   [
@@ -22,7 +23,7 @@ const router = createBrowserRouter(
         },
         {
           path: "Service",
-          element: <div>About Page</div>,
+          element: <ServicePage />,
         },
         {
           path: "Blog",

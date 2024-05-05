@@ -4,8 +4,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App.tsx";
 import "./index.css";
 import BasicLayout from "./components/Layout/index.tsx";
-import Portfolio from "./components/pages/Portfolio.tsx";
+
 import ServicePage from "./components/pages/ServicePage.tsx";
+import PortfolioPage from "./components/pages/PortfolioPage.tsx";
+import BlogList from "./components/pages/Blog/List.tsx";
 
 const router = createBrowserRouter(
   [
@@ -19,7 +21,7 @@ const router = createBrowserRouter(
         },
         {
           path: "Portfolio",
-          element: <Portfolio />,
+          element: <PortfolioPage />,
         },
         {
           path: "Service",
@@ -27,7 +29,7 @@ const router = createBrowserRouter(
         },
         {
           path: "Blog",
-          element: <div>Blog Page</div>,
+          element: <BlogList />,
         },
         {
           path: "Blog/:id",

@@ -34,12 +34,12 @@ export default function Faq() {
           {data.map((item, idx) => (
             <div
               key={`QA-${idx}`}
-              className=" border-[#F7F7F7] border rounded-md"
+              className=" border-[#F7F7F7] border border-[#E9E9E9] rounded-md text-left"
             >
-              <h2 className=" text-2xl text-[#3B3B3Bi] font-bold my-4">
+              <h2 className=" mt-6 ml-4 text-2xl text-[#3B3B3B] font-bold my-4">
                 {item.title}
               </h2>
-              <p className=" text-[#5B5B5B]">{item.description}</p>
+              <p className="ml-4 mb-3 text-[#5B5B5B]">{item.description}</p>
             </div>
           ))}
         </div>

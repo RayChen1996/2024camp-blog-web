@@ -36,8 +36,11 @@ export default function CustomSample() {
 
   return (
     <div>
-      <SectionTitle title="客戶案例" />
-      <div className="grid grid-cols-1 md:grid-cols-2">
+      <div className=" mt-32">
+        <SectionTitle title="客戶案例" />
+      </div>
+
+      <div className=" mt-20 grid grid-cols-1 md:grid-cols-2">
         {data.map((item, idx) => (
           <div
             key={`cardItem-${idx}`}

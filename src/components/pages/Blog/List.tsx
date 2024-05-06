@@ -65,24 +65,41 @@ export default function List() {
         <SectionTitle title="部落格" />
       </div>
 
-      <p className=" mt-6 mb-20">不定期分享技術文章</p>
-      {data.map((item, idx) => (
-        <div key={`item-${idx}`} className=" flex mb-16 gap-4">
-          <div className=" w-1/3">
-            <img src={item.imagSrc} alt="" />
-          </div>
-          <div className=" w-2/3 text-left">
-            <div className=" flex gap-2 items-center">
-              <span>{item.dateStr}</span>
-              <span className=" rounded-full bg-[#F1F1F1] p-3">{item.tag}</span>
-            </div>
-            <h2 className="my-4 text-xl font-bold text-[#3B3B3B] ">
-              {item.title}
-            </h2>
-            <p className=" text-[#3B3B3B]">{item.description}</p>
-          </div>
+      <p className=" mt-6 mb-20 text-center">不定期分享技術文章</p>
+
+      <div className=" lg:flex lg:flex-row-reverse">
+        <div className=" w-1/3">
+          <ul className=" flex lg:flex-col ">
+            <li className=" mb-8">全部文章</li>
+            <li className=" mb-8">UI/UX 新知</li>
+            <li className=" mb-8">數位產品設計</li>
+            <li className=" mb-8">平面設計</li>
+            <li className=" mb-8">前端開發</li>
+          </ul>
         </div>
-      ))}
+
+        <div>
+          {data.map((item, idx) => (
+            <div key={`item-${idx}`} className=" flex mb-16 gap-4">
+              <div className=" w-1/3">
+                <img src={item.imagSrc} alt="" />
+              </div>
+              <div className=" w-2/3 text-left">
+                <div className=" flex gap-2 items-center">
+                  <span>{item.dateStr}</span>
+                  <span className=" rounded-full bg-[#F1F1F1] p-3">
+                    {item.tag}
+                  </span>
+                </div>
+                <h2 className="my-4 text-xl font-bold text-[#3B3B3B] ">
+                  {item.title}
+                </h2>
+                <p className=" text-[#3B3B3B]">{item.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

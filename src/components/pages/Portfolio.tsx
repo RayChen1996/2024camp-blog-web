@@ -51,41 +51,43 @@ export default function Portfolio() {
   function ModalClickOpen() {
     const dialog = document.getElementById("my_modal_1") as HTMLDialogElement;
     if (dialog) {
-      dialog.showModal(); // 确保类型正确，调用 showModal
+      dialog.showModal();
     }
   }
 
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-2">
+      <ul className="grid grid-cols-1 md:grid-cols-2">
         {data.map((item, idx) => (
-          <div
+          <li
             onClick={() => ModalClickOpen()}
             key={`cardItem-${idx}`}
-            className="card ml-6 mb-20 cursor-pointer  "
+            className="card ml-6 mb-20 cursor-pointer"
           >
             <figure>
-              <img src={item.imagSrc} alt="" />
+              <img className="w-[636px]" src={item.imagSrc} alt="作品卡片圖" />
             </figure>
-            <div className=" text-left">
-              <h2 className=" text-black font-bold mt-4 mb-2 text-[28px]">
+            <div className="text-left">
+              <h2 className=" text-black font-bold mt-4 mb-2 text-[28px] leading-[33.6px]">
                 {item.title}
               </h2>
               <p className="text-[#919191] mb-6">{item.description}</p>
-              <div className="card-actions  ">
-                {item.hashTags.map((item, idx) => (
-                  <button
-                    key={idx}
-                    className="btn border-none text-black  bg-[#F1F1F1] rounded-full mr-4"
-                  >
-                    {item}
-                  </button>
-                ))}
+              <div className="card-actions">
+                <ul>
+                  {item.hashTags.map((item, idx) => (
+                    <li
+                      key={idx}
+                      className="btn border-none hover:bg-slate-400 text-black  bg-[#F1F1F1] rounded-full mr-4"
+                    >
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
 
       <dialog id="my_modal_1" className="modal">
         <div className="modal-box bg-white">
@@ -93,7 +95,7 @@ export default function Portfolio() {
             <form method="dialog">
               {/* if there is a button in form, it will close the modal */}
               <button className=" ">
-                <img src={close} alt="" />
+                <img src={close} alt="關閉" />
               </button>
             </form>
           </div>
@@ -111,11 +113,11 @@ export default function Portfolio() {
             </div>
           </div>
 
-          <img src={modalimage1} alt="" />
+          <img src={modalimage1} alt="對話框作品圖" />
 
           <h3 className="font-bold text-lg">主視覺</h3>
           <p>可直接設定日期、起迄星球、張數，快速查詢可購買的票券。</p>
-          <img src={modalimage2} alt="" />
+          <img src={modalimage2} alt="對話框作品圖2" />
         </div>
       </dialog>
     </>

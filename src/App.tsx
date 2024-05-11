@@ -6,7 +6,7 @@ import Article from "./components/pages/home/Article";
 // import Portfolio from "./components/pages/Portfolio";
 function App() {
   return (
-    <div className=" container h-full bg-white ">
+    <div className="container h-full bg-white ">
       {/* <Portfolio /> */}
 
       <Banner />

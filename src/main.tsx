@@ -37,7 +37,7 @@ const router = createBrowserRouter(
         },
         {
           path: "Contract",
-          element: <div>Contract Page</div>,
+          element: <div className=" h-screen">Contract Page</div>,
         },
       ],
     },

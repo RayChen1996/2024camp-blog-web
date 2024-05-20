@@ -27,7 +27,7 @@ export default function PriceTable() {
     <div>
       <SectionTitle title="價格表" />
       <div className=" container   ">
-        <div className=" flex gap-6">
+        <div className=" lg:flex gap-6">
           {data.map((item) => (
             <div className="flex  items-end  gap-2 bg-[#FAFAFA] shadow-md rounded-md py-9 px-8">
               <img src={item.imgSrc} alt="" />

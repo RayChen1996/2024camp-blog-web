@@ -49,13 +49,13 @@ export default function ServiceFlow() {
     },
   ];
   return (
-    <div>
-      <div className=" mt-32 ">
-        <SectionTitle title="服務流程" />
-      </div>
+    <div className="mt-32">
+      <div className="bg-service px-2 py-7 pb-md-9">
+        <div className=" mt-[120px] mb-20">
+          <SectionTitle textColor=" text-white" title="服務流程" />
+        </div>
 
-      <div className="bg-service">
-        <div className="m-auto ">
+        <div className="m-auto  ">
           {data.map((item, idx) => (
             <div
               className=" bg-[#3B3B3B]  w-2/3 m-auto   mb-16 md:flex gap-2 items-center p-8 rounded-md   border-[1px] border-[#919191] "

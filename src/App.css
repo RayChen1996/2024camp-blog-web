@@ -17,3 +17,9 @@
     animation: logo-spin infinite 20s linear;
   }
 } */
+.bg-service {
+  background: linear-gradient(315deg, #1e1e1e 0%, #1e1e1e 49.97%, #000000 50%);
+  padding: 0 30px;
+  padding-top: 100%;
+  position: relative;
+}

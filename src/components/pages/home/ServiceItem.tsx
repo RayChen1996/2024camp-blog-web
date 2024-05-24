@@ -28,7 +28,7 @@ export default function ServiceItem() {
     },
   ];
   return (
-    <div className=" mt-32 mx-auto flex flex-col justify-center items-center">
+    <div className=" mx-8 mt-32  flex flex-col justify-center items-center">
       <SectionTitle title="服務項目" />
       <div className="w-full mt-20 gap-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         {serviceItmes.map((item, idx) => (
@@ -37,12 +37,12 @@ export default function ServiceItem() {
             className=" rounded-lg bg-black flex justify-center items-center flex-col  w-12/12 h-60    "
           >
             <img className=" mb-[34px]" src={item.svg} alt="" />
-            <label htmlFor="">{item.title}</label>
+            <label className=" font-bold text-white text-xl" htmlFor="">
+              {item.title}
+            </label>
           </div>
         ))}
       </div>
-
-      <div>想要合作或瞭解更多？</div>
     </div>
   );
 }

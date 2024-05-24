@@ -6,8 +6,8 @@ import FontEffect from "../../../../public/fontEffect.svg";
 
 export default function Banner() {
   return (
-    <div className=" bg-white h-full lg:flex flex-row-reverse">
-      <div className=" w- w-10/12">
+    <div className="bg-white h-full lg:flex flex-row-reverse">
+      <div className="w-10/12">
         <img src={BgIndex} alt="" />
       </div>
 

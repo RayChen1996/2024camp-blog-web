@@ -1,10 +1,10 @@
 export default function Block1() {
   return (
-    <div className=" m-auto  w-1/2   mb-20 ">
-      <div className=" relative">
+    <div className="m-auto w-1/2 mb-20">
+      <div className="relative">
         <img src="LdoubleComma.svg" alt="" />
 
-        <p className=" mb-4 text-[#1E1E1E]">
+        <p className="mb-4 text-[#1E1E1E]">
           讓使用者在觀賞與使用的旅程中，發現設計的價值
         </p>
         <p className="text-[#1E1E1E]">

@@ -54,23 +54,29 @@ export default function ServiceFlow() {
         <SectionTitle title="服務流程" />
       </div>
 
-      <div className=" mt-20 w-2/6 m-auto">
-        {data.map((item, idx) => (
-          <div
-            className=" bg-[#3B3B3B] mb-16 flex gap-2 items-center p-8 rounded-md   border-[1px] border-[#919191] "
-            key={`item-${idx}`}
-          >
-            <div className=" w-1/6">
-              <img src={item.imagSrc} alt="" />
-            </div>
-            <div className=" text-left  w-2/3">
-              <div>
-                <h2 className=" text-2xl font-bold">{item.title}</h2>
+      <div className="bg-service">
+        <div className="m-auto ">
+          {data.map((item, idx) => (
+            <div
+              className=" bg-[#3B3B3B]  w-2/3 m-auto   mb-16 md:flex gap-2 items-center p-8 rounded-md   border-[1px] border-[#919191] "
+              key={`item-${idx}`}
+            >
+              <div className=" md:w-1/6 flex justify-center ">
+                <img src={item.imagSrc} alt="" />
               </div>
-              <p className=" text-sm">{item.description}</p>
+              <div className=" text-left  md:w-2/3">
+                <div>
+                  <h2 className=" text-white text-center md:text-left text-2xl font-bold my-2">
+                    {item.title}
+                  </h2>
+                </div>
+                <p className="   text-[#E9E9E9]  font-normal text-xl ">
+                  {item.description}
+                </p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

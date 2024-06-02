@@ -63,19 +63,6 @@ export default function Navbar() {
             <li>
               <Link to={"/Contract"}>聯絡我</Link>
             </li>
-            <li>
-              <details>
-                <summary>Parent</summary>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </details>
-            </li>
           </ul>
         </div>
         <div className="navbar-end">
